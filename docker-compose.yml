@@ -1,0 +1,11 @@
+services:
+  nginx-react:
+    image: social_feed:latest
+    container_name: sf_cont
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    environment:
+      NODE_ENV: production
